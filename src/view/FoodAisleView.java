@@ -16,18 +16,18 @@ public class FoodAisleView extends View {
 
     public FoodAisleView() {
         super("Food Aisle. Choose from: \n"
-                + "T - Tuna\n"
-                + "P - Protein Bar\n"
-                + "L - Beans\n"
-                + "W - Water\n"
-                + "B - Bread\n"
-                + "C - Crackers\n"
-                + "G - Granola Bars\n"
-                + "V - Vegetables\n"
-                + "F - Fruit\n"
-                + "H - Chocolate\n"
-                + "O - Cookies\n"
-                + "A - Candy\n"
+                + "T - Tuna: $" + Item.TUNA.getItemCost() + " | " + Item.TUNA.getSurvivalPoints() + " Survival Points\n"
+                + "P - Protein Bar: $" + Item.PROTEIN_BAR.getItemCost() + " | " + Item.PROTEIN_BAR.getSurvivalPoints() + " Survival Points\n"
+                + "L - Beans: $" + Item.BEANS.getItemCost() + " | " + Item.BEANS.getSurvivalPoints() + " Survival Points\n"
+                + "W - Water: $" + Item.WATER.getItemCost() + " | " + Item.WATER.getSurvivalPoints() + " Survival Points\n"
+                + "B - Bread: $" + Item.BREAD.getItemCost() + " | " + Item.BREAD.getSurvivalPoints() + " Survival Points\n"
+                + "C - Crackers: $" + Item.CRACKERS.getItemCost() + " | " + Item.CRACKERS.getSurvivalPoints() + " Survival Points\n"
+                + "G - Granola Bars: $" + Item.GRANOLA_BARS.getItemCost() + " | " + Item.GRANOLA_BARS.getSurvivalPoints() + " Survival Points\n"
+                + "V - Vegetables: $" + Item.VEGETABLES.getItemCost() + " | " + Item.VEGETABLES.getSurvivalPoints() + " Survival Points\n"
+                + "F - Fruit: $" + Item.FRUIT.getItemCost() + " | " + Item.FRUIT.getSurvivalPoints() + " Survival Points\n"
+                + "H - Chocolate: $" + Item.CHOCOLATE.getItemCost() + " | " + Item.CHOCOLATE.getSurvivalPoints() + " Survival Points\n"
+                    + "O - Cookies: $" + Item.COOKIES.getItemCost() + " | " + Item.COOKIES.getSurvivalPoints() + " Survival Points\n"
+                + "A - Candy: $" + Item.CANDY.getItemCost() + " | " + Item.CANDY.getSurvivalPoints() + " Survival Points\n"
                 + "X - Return to previous menu\n");
 
     }
@@ -35,134 +35,211 @@ public class FoodAisleView extends View {
     @Override
     public boolean doAction(char input) {
 
+        int currentMoney = Game.getInstance().getPlayer().getMoney();
+        int currentSP = Game.getInstance().getPlayer().getCurrentSurvivalPoints();
+
         switch (input) {
             case 'T':
                 System.out.println("You bought tuna.");
-                Item item = Item.TUNA;
+
                 String itemName = Item.TUNA.getItemName();
-   
-                System.out.println("TEST!!!!!" + item);
-                
                 int itemCost = Item.TUNA.getItemCost();
                 int itemSP = Item.TUNA.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
-                
+
+                int newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                int newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
+
                 break;
             case 'P':
                 System.out.println("You bought a protein bar.");
-                
-                item = Item.PROTEIN_BAR;
                 itemName = Item.PROTEIN_BAR.getItemName();
                 itemCost = Item.PROTEIN_BAR.getItemCost();
                 itemSP = Item.PROTEIN_BAR.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
             case 'L':
                 System.out.println("You bought beans.");
-                item = Item.BEANS;
                 itemName = Item.BEANS.getItemName();
                 itemCost = Item.BEANS.getItemCost();
                 itemSP = Item.BEANS.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
             case 'W':
                 System.out.println("You bought water.");
-                item = Item.WATER;
                 itemName = Item.WATER.getItemName();
                 itemCost = Item.WATER.getItemCost();
                 itemSP = Item.WATER.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+                
             case 'B':
                 System.out.println("You bought bread.");
-                item = Item.BREAD;
                 itemName = Item.BREAD.getItemName();
-               
+
                 itemCost = Item.BREAD.getItemCost();
                 itemSP = Item.BREAD.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
-                
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
             case 'C':
                 System.out.println("You bought crackers.");
-                item = Item.CRACKERS;
                 itemName = Item.CRACKERS.getItemName();
                 itemCost = Item.CRACKERS.getItemCost();
                 itemSP = Item.CRACKERS.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'G':
                 System.out.println("You bought granola bars");
-                item = Item.GRANOLA_BARS;
                 itemName = Item.GRANOLA_BARS.getItemName();
                 itemCost = Item.GRANOLA_BARS.getItemCost();
                 itemSP = Item.GRANOLA_BARS.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'V':
                 System.out.println("You bought vegetables.");
-                item = Item.VEGETABLES;
                 itemName = Item.VEGETABLES.getItemName();
                 itemCost = Item.VEGETABLES.getItemCost();
                 itemSP = Item.VEGETABLES.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'F':
                 System.out.println("You bought fruit.");
-                item = Item.FRUIT;
                 itemName = Item.FRUIT.getItemName();
                 itemCost = Item.FRUIT.getItemCost();
                 itemSP = Item.FRUIT.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'H':
                 System.out.println("You bought chocolate.");
-                item = Item.CHOCOLATE;
                 itemName = Item.CHOCOLATE.getItemName();
                 itemCost = Item.CHOCOLATE.getItemCost();
                 itemSP = Item.CHOCOLATE.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'O':
                 System.out.println("You bought cookies.");
-                item = Item.COOKIES;
                 itemName = Item.COOKIES.getItemName();
                 itemCost = Item.COOKIES.getItemCost();
                 itemSP = Item.COOKIES.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
+
             case 'A':
                 System.out.println("You bought candy.");
-                item = Item.CANDY;
-                
                 itemName = Item.CANDY.getItemName();
                 itemCost = Item.CANDY.getItemCost();
                 itemSP = Item.CANDY.getSurvivalPoints();
-                
-                subMoney();
-                AddItem();
+
+                newMoney = currentMoney - itemCost;
+
+                Game.getInstance().getPlayer().setMoney(newMoney);
+
+                newSP = currentSP + itemSP;
+                Game.getInstance().getPlayer().setCurrentSurvivalPoints(newSP);
+
+                displayMoney();
+                displaySP();
                 break;
             case 'X':
                 return false;
@@ -170,18 +247,22 @@ public class FoodAisleView extends View {
                 System.out.println("Please enter a valid input.");
 
         }
-        
+
         return true;
 
     }
 
-    private void subMoney() {
        
+    private void displayMoney() {
         
+        System.out.println("You now have $" + Game.getInstance().getPlayer().getMoney() + " in your money account.");
+
+    
     }
 
-    private void AddItem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void displaySP() {
+        System.out.println("You now have " + Game.getInstance().getPlayer().getCurrentSurvivalPoints() + " Survival Points!");
+    
     }
 
 }

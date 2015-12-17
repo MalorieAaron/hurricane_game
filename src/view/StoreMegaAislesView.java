@@ -13,6 +13,8 @@
 package view;
 
 import java.util.Scanner;
+import model.Game;
+import model.Player;
 
 /**
  *
@@ -64,12 +66,15 @@ public class StoreMegaAislesView extends View {
         switch(input) {
             case 'F':
                 enterFoodAisle();
+                deductTime();
                 break;
             case 'C':
                 enterClothesAisle();
+                deductTime();
                 break;
             case 'P':
                 enterPersonalCareAisle();
+                deductTime();
                 break;
             case 'X':
                 return false;
@@ -94,6 +99,14 @@ public class StoreMegaAislesView extends View {
     private void enterPersonalCareAisle() {
         PersonalCareAisleView personalCareAisle = new PersonalCareAisleView();
         personalCareAisle.display();
+    }
+    
+    public void deductTime() {
+
+        int deduction = 1;
+        int newTimeRemaining = Game.getInstance().getPlayer().getTimeRemaining() - deduction;
+
+       Game.getInstance().getPlayer().setTimeRemaining(newTimeRemaining);
     }
     
     
