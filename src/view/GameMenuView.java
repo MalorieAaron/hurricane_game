@@ -24,15 +24,13 @@ public class GameMenuView extends View {
         super("Game Menu:\n"
                 + "M - Map of town\n"
                 + "S - Show current location\n"
-                + "C - Complete list of items in game\n"
-                + "I - Inventory list\n"
+//                + "C - Complete list of items in game\n"
+//                + "I - Inventory list\n"
                 + "L - Move to a new location\n"
                 + "D - Delivery Center Menu\n"
                 + "A - Money Accounts\n"
                 + "P - Survival Points Earned\n"
                 + "T - Time before hurricane\n"
-                + "R - Retail\n"
-                + "B - House\n"
                 + "H - Help Menu\n"
                 + "X - Exit to Main Menu\n");
     }
@@ -44,11 +42,11 @@ public class GameMenuView extends View {
             case 'M':
                 displayMap();
                 break;
-            case 'C':
-                showAllItems();
-            case 'I':
-                inventoryList();
-                break;
+//            case 'C':
+//                showAllItems();
+//            case 'I':
+//                inventoryList();
+//                break;
             case 'L':
                 moveToNewLocation();
                 break;
@@ -66,18 +64,18 @@ public class GameMenuView extends View {
             case 'H':
                 showHelpMenu();
                 break;
-            case 'Y':
-//                printCampingItemReport();
-                break;
+//            case 'Y':
+////                printCampingItemReport();
+//                break;
             case 'S':
                 showCurrentLocation();
                 break;
-            case 'R':
-                showStores();
-                break;
-            case 'B':
-                showHouse();
-                break;
+//            case 'R':
+//                showStores();
+//                break;
+//            case 'B':
+//                showHouse();
+//                break;
             case 'X':
                 return false;
             default:
