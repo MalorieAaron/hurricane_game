@@ -16,7 +16,7 @@ public class FoodAisleView extends View {
 
     public FoodAisleView() {
         super("Food Aisle. Choose from: \n"
-                + "T - " + Item.TUNA.getItemName() +"\n"
+                + "T - Tuna\n"
                 + "P - Protein Bar\n"
                 + "L - Beans\n"
                 + "W - Water\n"
@@ -38,8 +38,8 @@ public class FoodAisleView extends View {
         switch (input) {
             case 'T':
                 System.out.println("You bought tuna.");
-                subMoney();
-                AddItem();
+//                subMoney();
+//                AddItem();
                 
                 break;
             case 'P':
@@ -88,7 +88,9 @@ public class FoodAisleView extends View {
 
     private void subMoney() {
         int currentMoney = Game.getInstance().getPlayer().getMoney();
-//        int foodCost = ;
+//        int itemCost = Item.valueOf(null);
+        // get cost of each item based on their name
+        
         
     }
 
