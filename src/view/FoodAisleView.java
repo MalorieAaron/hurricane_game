@@ -39,7 +39,7 @@ public class FoodAisleView extends View {
             case 'T':
                 System.out.println("You bought tuna.");
                 Item item = Item.TUNA;
-                STRING itemName = Item.TUNA.getItemName();
+                String itemName = Item.TUNA.getItemName();
    
                 System.out.println("TEST!!!!!" + item);
                 
