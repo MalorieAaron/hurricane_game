@@ -11,6 +11,8 @@ import model.Location;
 import model.MainMap;
 import model.Player;
 import view.DeliveryCenterView;
+import view.StoreCampingAislesView;
+import view.StoreMegaAislesView;
 
 /**
  *
@@ -84,11 +86,18 @@ public class MapControl {
 
             p.setLocation(newLocation);
             
-              if(newRow == 4 && newCol == 4) {
+            
+            
+            if(newRow == 4 && newCol == 4) {
             //Do all the mega store stuff HERE!!!
-                  
+                      
+                System.out.println("You are now in the MEGA STORE!!");
+
+                StoreMegaAislesView megaStore = new StoreMegaAislesView();
+                megaStore.display();  
             }
          
+            
             if(newRow == 1 && newCol == 1) {
             //Do all the Delivery Center stuff HERE!!!
                 
@@ -97,9 +106,17 @@ public class MapControl {
                 DeliveryCenterView deliveryMenu = new DeliveryCenterView();
                 deliveryMenu.display();
             }
+            
+            
            if(newRow == 0 && newCol == 3) {
             //Do all the Camping store stuff HERE!!!
+               System.out.println("You are now in the CAMPING STORE!!");
+
+                StoreCampingAislesView campingStore = new StoreCampingAislesView();
+                campingStore.display(); 
             }
+           
+           
             if(newRow == 1 && newCol == 0) {
             //Do all the House stuff HERE!!!
                 System.out.println("You are now in the HOUSE!!\n");

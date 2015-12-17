@@ -23,7 +23,8 @@ public class StoreMegaAislesView extends View {
     private double number;
     
     public StoreMegaAislesView() {
-        super ("Store aisles:\n"
+        super ("Select which Aisle you would like to shop in:\n"
+                + "* Remember that it will take you 1 hour to shop in each aisle,so shop wisely!\n"
                 + "F - Food\n"
                 + "C - Clothes\n" 
                 + "P - Personal Care\n"

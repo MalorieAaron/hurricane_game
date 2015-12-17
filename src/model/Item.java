@@ -48,22 +48,22 @@ public enum Item implements Serializable{
     MEDICINE("Medicine", 5, 30, "Personal Care"); 
     
     
-    private final String itemDescription;
+    private final String itemName;
     private final int itemCost;        
     private final int survivalPoints;
     private final String categoryName;
     public final int NUMBER_OF_ITEMS = 22;
     
-    Item(String itemDescription, int itemCost, int survivalPoints, String categoryName) {
-        this.itemDescription = itemDescription;
+    Item(String itemName, int itemCost, int survivalPoints, String categoryName) {
+        this.itemName = itemName;
         this.itemCost = itemCost;
         this.survivalPoints = survivalPoints;
         this.categoryName = categoryName;
         
     }
 
-    public String getItemDescription() {
-        return itemDescription;
+    public String getItemName() {
+        return itemName;
     }
     public int getItemCost() {
         return itemCost;

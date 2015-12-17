@@ -5,6 +5,9 @@
  */
 package view;
 
+import model.Game;
+import model.Item;
+
 /**
  *
  * @author Maxine
@@ -13,7 +16,7 @@ public class FoodAisleView extends View {
 
     public FoodAisleView() {
         super("Food Aisle. Choose from: \n"
-                + "T - Tuna\n"
+                + "T - " + Item.TUNA.getItemName() +"\n"
                 + "P - Protein Bar\n"
                 + "L - Beans\n"
                 + "W - Water\n"
@@ -35,6 +38,9 @@ public class FoodAisleView extends View {
         switch (input) {
             case 'T':
                 System.out.println("You bought tuna.");
+                subMoney();
+                AddItem();
+                
                 break;
             case 'P':
                 System.out.println("You bought a protein bar.");
@@ -78,6 +84,16 @@ public class FoodAisleView extends View {
         
         return true;
 
+    }
+
+    private void subMoney() {
+        int currentMoney = Game.getInstance().getPlayer().getMoney();
+//        int foodCost = ;
+        
+    }
+
+    private void AddItem() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
