@@ -47,6 +47,10 @@ public class MapControl {
         Location currentLocation = p.getLocation();
         Location newLocation = m.getLocation(newRow, newCol);
         
+        int currentSP = Game.getInstance().getPlayer().getCurrentSurvivalPoints();
+        int neededSP = Game.getInstance().getNeededSurvivalPoints();
+        int remainingSP = neededSP - currentSP;
+        
        
        
         if(p.getTimeRemaining() <= 0) {
@@ -55,9 +59,7 @@ public class MapControl {
            
             p.setLocation(m.getStartingLocation());
             //check to see is player won
-                int currentSP = Game.getInstance().getPlayer().getCurrentSurvivalPoints();
-                int neededSP = Game.getInstance().getNeededSurvivalPoints();
-                int remainingSP = neededSP - currentSP;
+               
 
                 if (currentSP < 800) {
                     System.out.println("You currently have: "
@@ -100,44 +102,16 @@ public class MapControl {
             }
             if(newRow == 1 && newCol == 0) {
             //Do all the House stuff HERE!!!
+                System.out.println("You are now in the HOUSE!!\n");
+                
+                if(currentSP < 800){
+                    System.out.println("You currently have: "
+                            + "" + currentSP + " Survival Points");
+                    System.out.println("You needed to have at least 800 Survival Points to survive the hurricane...\n"
+                            + "You had better hurry to the store and get what you will need to survive!");
+                    }
             }  
-            
             return true;
         }
-        
-    }
-
-//    private int row;
-//    private int col;
-//    private Location[][] locations;
-//    
-//    public static MainMap createMap(Player player) {
-//        
-//        MainMap map = new MainMap(3, 4);
-//        
-//        map.initialize();
-//        
-//        player.setLocation(map.getLocations()[1][1]);
-//        
-//        return map;
-//        
-//        Location location = createLocation();
-//        
-//        //Scene[] scenes = createScenes();
-//        GameControl gameControl = new GameControl();
-//        gameControl.assignNamesToLocations(map);
-//        return map;
-//    }
-//
-//    
-//    private static Location createLocation() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-    /*public Map() {
-        
-     }
-     //public MainMap (int row, int col) {
-    
-        
-     }*/
+    }  
 }

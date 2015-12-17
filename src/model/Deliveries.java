@@ -14,10 +14,10 @@ import java.util.Objects;
  */
 public class Deliveries implements Serializable {
     
-    // I set the money for every delivery to 10 dollars and the time to half an hour
+    // I set the money for every delivery to 20 dollars and the time to an hour
     
-    public static final double DELIVERY_MONEY = 10.00;
-    public static final double DELIVERY_TIME = 0.50;
+    public static final int DELIVERY_MONEY = 20;
+    public static final int DELIVERY_TIME = 1;
 
     private String type;
     private boolean status;
@@ -26,11 +26,11 @@ public class Deliveries implements Serializable {
     public Deliveries() {
     }
 
-    public static double getDELIVERY_MONEY() {
+    public static int getDELIVERY_MONEY() {
         return DELIVERY_MONEY;
     }
 
-    public static double getDELIVERY_TIME() {
+    public static int getDELIVERY_TIME() {
         return DELIVERY_TIME;
     }
 
