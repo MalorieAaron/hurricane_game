@@ -18,7 +18,6 @@ import model.Game;
 import model.Item;
 import model.MainMap;
 import model.Player;
-import view.WelcomeView;
 
 /**
  *
@@ -86,79 +85,79 @@ public class GameControl {
 
         System.out.println("Food:");
         
-        System.out.println(Item.BEANS.getItemDescription() + " $"
+        System.out.println(Item.BEANS.getItemName() + " $"
                 + Item.BEANS.getItemCost() + " " + Item.BEANS.getSurvivalPoints());
         
-        System.out.println(Item.BREAD.getItemDescription() + " $" +
+        System.out.println(Item.BREAD.getItemName() + " $" +
                 Item.BREAD.getItemCost() + " " + Item.BREAD.getSurvivalPoints());
         
-        System.out.println(Item.CANDY.getItemDescription() +" $" +
+        System.out.println(Item.CANDY.getItemName() +" $" +
                 Item.CANDY.getItemCost() + " " + Item.CANDY.getSurvivalPoints());
         
-        System.out.println(Item.FRUIT.getItemDescription() +" $" +
+        System.out.println(Item.FRUIT.getItemName() +" $" +
                 Item.FRUIT.getItemCost() + " " + Item.FRUIT.getSurvivalPoints());
         
-        System.out.println(Item.TUNA.getItemDescription() +" $" +
+        System.out.println(Item.TUNA.getItemName() +" $" +
                 Item.TUNA.getItemCost() + " " + Item.TUNA.getSurvivalPoints());
         
-        System.out.println(Item.VEGETABLES.getItemDescription() +" $" +
+        System.out.println(Item.VEGETABLES.getItemName() +" $" +
                 Item.VEGETABLES.getItemCost() + " " + Item.VEGETABLES.getSurvivalPoints());
         
-        System.out.println(Item.CHOCOLATE.getItemDescription() +" $" +
+        System.out.println(Item.CHOCOLATE.getItemName() +" $" +
                 Item.CHOCOLATE.getItemCost() + " " + Item.CHOCOLATE.getSurvivalPoints());
         
-        System.out.println(Item.COOKIES.getItemDescription() +" $" +
+        System.out.println(Item.COOKIES.getItemName() +" $" +
                 Item.COOKIES.getItemCost() + " " + Item.COOKIES.getSurvivalPoints());
         
-        System.out.println(Item.CRACKERS.getItemDescription() +" $" +
+        System.out.println(Item.CRACKERS.getItemName() +" $" +
                 Item.CRACKERS.getItemCost() + " " + Item.CRACKERS.getSurvivalPoints());
         
-        System.out.println(Item.GRANOLA_BARS.getItemDescription() +" $" +
+        System.out.println(Item.GRANOLA_BARS.getItemName() +" $" +
                 Item.GRANOLA_BARS.getItemCost() + " " + Item.GRANOLA_BARS.getSurvivalPoints());
         
-        System.out.println(Item.PROTEIN_BAR.getItemDescription() +" $" +
+        System.out.println(Item.PROTEIN_BAR.getItemName() +" $" +
                 Item.PROTEIN_BAR.getItemCost() + " " + Item.PROTEIN_BAR.getSurvivalPoints());
         
-        System.out.println(Item.WATER.getItemDescription() +" $" +
+        System.out.println(Item.WATER.getItemName() +" $" +
                 Item.WATER.getItemCost() + " " + Item.WATER.getSurvivalPoints() + "\n");
         
         System.out.println("Clothes:");
         
-        System.out.println(Item.JACKET.getItemDescription() +" $" +
+        System.out.println(Item.JACKET.getItemName() +" $" +
                 Item.JACKET.getItemCost() + " " + Item.JACKET.getSurvivalPoints());
         
-        System.out.println(Item.SHOES.getItemDescription() +" $" +
+        System.out.println(Item.SHOES.getItemName() +" $" +
                 Item.SHOES.getItemCost() + " " + Item.SHOES.getSurvivalPoints());
         
-        System.out.println(Item.CANDY.getItemDescription() +" $" +
+        System.out.println(Item.CANDY.getItemName() +" $" +
                 Item.CANDY.getItemCost() + " " + Item.CANDY.getSurvivalPoints());
 
-        System.out.println(Item.SWEATSHIRT.getItemDescription() +" $" +
+        System.out.println(Item.SWEATSHIRT.getItemName() +" $" +
                 Item.SWEATSHIRT.getItemCost() + " " + Item.SWEATSHIRT.getSurvivalPoints() + "\n");
         
         System.out.println("Camping/Survival:");
         
-        System.out.println(Item.TARP.getItemDescription() +" $" +
+        System.out.println(Item.TARP.getItemName() +" $" +
                 Item.TARP.getItemCost() + " " + Item.TARP.getSurvivalPoints());
 
-        System.out.println(Item.TENT.getItemDescription() +" $" +
+        System.out.println(Item.TENT.getItemName() +" $" +
                 Item.TENT.getItemCost() + " " + Item.TENT.getSurvivalPoints());
 
-        System.out.println(Item.CAMP_STOVE.getItemDescription() +" $" +
+        System.out.println(Item.CAMP_STOVE.getItemName() +" $" +
                 Item.CAMP_STOVE.getItemCost() + " " + Item.CAMP_STOVE.getSurvivalPoints());
         
-        System.out.println(Item.FUEL.getItemDescription() +" $" +
+        System.out.println(Item.FUEL.getItemName() +" $" +
                 Item.FUEL.getItemCost() + " " + Item.FUEL.getSurvivalPoints());
         
-        System.out.println(Item.HYGIENE_KIT.getItemDescription() +" $" +
+        System.out.println(Item.HYGIENE_KIT.getItemName() +" $" +
                 Item.HYGIENE_KIT.getItemCost() + " " + Item.HYGIENE_KIT.getSurvivalPoints() +"\n");
         
         System.out.println("Personal Care:");
         
-        System.out.println(Item.MEDICINE.getItemDescription() +" $" +
+        System.out.println(Item.MEDICINE.getItemName() +" $" +
                 Item.MEDICINE.getItemCost() + " " + Item.MEDICINE.getSurvivalPoints());
 
-        System.out.println(Item.TOILET_PAPER.getItemDescription() +" $" +
+        System.out.println(Item.TOILET_PAPER.getItemName() +" $" +
                 Item.TOILET_PAPER.getItemCost() + " " + Item.TOILET_PAPER.getSurvivalPoints());
 
         return null;

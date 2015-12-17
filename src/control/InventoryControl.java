@@ -117,7 +117,7 @@ public class InventoryControl {
             return false;
         }
         
-        int newMoney = p.getMoney() - totalCost;
+        int newMoney = (int) (p.getMoney() - totalCost);
         p.setMoney(newMoney);
         
         int count = 0;
